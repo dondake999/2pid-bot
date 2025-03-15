@@ -1,5 +1,17 @@
 require('dotenv').config();
+const express = require('express'); // Added Express
 const { Client, GatewayIntentBits, SlashCommandBuilder, REST, Routes } = require('discord.js');
+
+const app = express(); // Create an Express app
+
+// Keep the bot alive by serving a simple webpage
+app.get('/', (req, res) => {
+    res.send('Bot is running!');
+});
+
+// Define a PORT for Render
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Web server running on port ${PORT}`));
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
