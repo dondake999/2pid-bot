@@ -12,7 +12,11 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "discord.js": "^14.18.0",
+HEAD
     "dotenv": "^16.4.7",
     "express": "^4.18.2"
+
+    "dotenv": "^16.4.7"
+d595a01 (Added Express to keep bot alive)
   }
 }
